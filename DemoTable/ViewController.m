@@ -107,14 +107,17 @@
     if (self.topView.getSelectedItemIndex == 0) {
         if (self.firstTableView.contentOffset.y > self.topView.height - kItemheight) {
             placeholderOffset = self.topView.height - kItemheight;
-        } else {
+        }
+        else {
             placeholderOffset = self.firstTableView.contentOffset.y;
         }
         [self.secondTableView setContentOffset:CGPointMake(0, placeholderOffset) animated:NO];
-    } else {
+    }
+    else {
         if (self.secondTableView.contentOffset.y > self.topView.height - kItemheight) {
             placeholderOffset = self.topView.height - kItemheight;
-        } else {
+        }
+        else {
             placeholderOffset = self.secondTableView.contentOffset.y;
         }
         [self.firstTableView setContentOffset:CGPointMake(0, placeholderOffset) animated:NO];
